@@ -2,9 +2,14 @@
 
 
 //React Hooks 写法：
-import React, { useState } from 'react';
+import React, { useState,useEffect} from 'react';
 function App(){
-    const [ count , setCount ] = useState(0);
+    const [ count , setCount ] = useState(0);//数组解构
+    //---关键代码---------start-------
+    useEffect(()=>{
+        console.log(`useEffect=>You clicked ${count} times`)
+    })
+    //---关键代码---------end-------
     return (
         <div>
             <p>You clicked {count} times</p>
