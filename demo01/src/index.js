@@ -6,7 +6,8 @@ import Example1 from "./Example1";
 import Example3 from "./Example3";
 // import Example from "./Example4";
 // import Example from "./Example5";
-import Example from './Example6/Example6'
+// import Example from './Example6/Example6'
+import Example from './Example7/Example7'
 // ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<Example />, document.getElementById('root'));
 
