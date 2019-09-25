@@ -51,8 +51,6 @@ function App(){
                 <Route path="/list/" component={List} />
             </Router>
 
-
-
         </div>
     )
 }
