@@ -1,6 +1,6 @@
 import React, { useState , useContext,createContext } from 'react';
 //===关键代码
-const CountContext = createContext()
+const CountContext = createContext({})
 function Counter(){
     const count = useContext(CountContext)  //一句话就可以得到count
     return (<h2>{count}</h2>)
