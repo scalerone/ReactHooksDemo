@@ -12,7 +12,8 @@ import ReactDOM from 'react-dom';
 // import Example from "./Example8";
 // import Example from "./UseReducer";
 // import Example from "./UseMemo";
-import Example from "./UseCallback";
+// import Example from "./UseCallback";
+import Example from "./UseRef";
 // ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<Example />, document.getElementById('root'));
 
