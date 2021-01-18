@@ -1,12 +1,18 @@
-import React, { memo, useState,useMemo } from 'react';
-
+import React, { memo, useState,useMemo,useContext  } from 'react';
 // 子组件
-const ChildComp = (info) => {
-  console.log('ChildComp...',info);
-  return (<div>ChildComp...</div>);
+const ChildComp = (props) => {
+  // return  age;
+  // const info2= useContext(myContextContext ); // 得到父组件传的值
+  const { info } = props
+  console.log('props',props)
+  return (
+    <div>ChildComp...1 {info.age} xxx22 </div>
+  );
 };
 
-const MemoChildComp = memo(ChildComp);
+//增加count等无关变量时，不影响子组件的更新
+const MemoChildComp = memo(ChildComp);//替代pure.Component
+
 
 // 父组件
 const Parent = () => {
@@ -20,9 +26,14 @@ const Parent = () => {
     <div className="App">
       <div>hello world {count}</div>
       <div>hello age {age}</div>
-      <div onClick={() => { setCount(count => count + 1); }}>点击增加</div>
-      <div onClick={() => { setAge(age => age + 1); }}>点击增加年龄</div>
-      <MemoChildComp info={info}/>
+      <button onClick={() => { setCount(count => count + 1); }}>点击增加</button>
+      <button onClick={() => { setAge(age => age + 1); }}>点击增加年龄</button>
+      <div>
+
+        <MemoChildComp info={info}/>
+        {/*<MemoChildComp info={info}/>*/}
+      </div>
+
     </div>
   );
 };

@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 // import Example from "./Example5";
 // import Example from "./Example5";
 // import Example from './Example6/Example6'
-import Example7 from './Example7/Example7'
+// import Example7 from './Example7/Example7'
 // import Example from "./Example8";
 // import Example from "./UseReducer";
 import Example from "./UseMemo";
